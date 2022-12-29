@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Links</title>
+</head>
+
+<body>
+  <!--  
+  * Links dosyalar arasında bir bağlantı sağlamak için kullanılır. Örneğin birden fazla HTML dosyası var ve bir dosyadan diğer dosyaya geçiş yapmak için kullanılır.  
+  * "href" bilgisi bize nereye bağlanmak istediğimizi söyler.
+  * Ayrıca açılış kapanış etiketleri arasına bir text yazmak gerekir. Aşağıdaki ilk örnekte "Resimler" yazdığı gibi.
+  -->
+  <!--  
+  * "images.html" ile haylihazırda kullanılan HTML (Burada "links(6).html") aynı dizin içerisinde olduğu için direk yazılabilir.
+  -->
+  <a href="images(5).html">Resimler</a>
+  <!-- 
+  * Resmi direk açmak için aşağıdaki gibi direk "jpg" dosyası eklenebilir.
+  -->
+  <a href="images/city.jpg">Resim Aç</a>
+  <!-- 
+  * Dizin içerisinde "zip" halindeki bir dosyayı indirmek için aşağıdaki gibi bir "a" etiketi kullanılabilir.
+  -->
+  <a href="./images/kimlik.zip">Resmi İndir</a>
+  <!-- 
+  * Herhangi bir internet sitesine gidilebilir.
+  -->
+  <a href="https://google.com.tr">Google Aç</a>
+  <!-- 
+  * target="_blank" attributesi kullanılır ise orijinal sayfa kalır ve gitmek istenen veya açılması istenen şey yeni bir sekmede açılır.
+  -->
+  <a href="https://google.com.tr" target="_blank">Google Aç</a>
+  <!-- 
+  * Gidilmek istenen resmin sayfada text olarak değil de direk resim olarak göstermek için "a" etiketi ardından "img" etiketi kullanılabilir.
+  -->
+  <a href="images/city.jpg" target="_blank">
+    <img src="images/city.jpg" alt="" />
+  </a>
+
+  <a href="images/city.jpg" target="_blank">
+    <img src="images/city.jpg" alt="" width="200" />
+  </a>
+  <!-- 
+  * "mailto:" attribute ile o anda işletim sisteminde atanmış olan mail programı ile direk mail gönderme açılabilir.
+  * E-posta içerisinde yollanacak şey de direkt olarak URL şeklinde yazılabilir. Eklenecek bilgiler içerisinde "cc" , "bcc" , "subject" ve "body" bulunur.
+  * Standard URL query notasyonları kullanılır. Burada "?" ana URL ile field valueleri ayırmak için kullanılır. "&" işareti ise field valueleri ayırmak için kullanılır.
+  -->
+  <a href="mailto:okanacioglu@gmail.com">Mail Gönder</a>
+
+  <a
+    href="mailto:nowhere@mozilla.org?cc=name2@rapidtables.com&bcc=name3@rapidtables.com&subject=The%20subject%20of%20the%20email&body=The%20body%20of%20the%20email">
+    Send mail with cc, bcc, subject and body
+  </a>
+
+  <!-- 
+  * "title" attribute ile açıklama eklenebilir.Bu "SEO" açısından da önemlidir.
+  -->
+  <a href="images.html" title="Resimleri Görüntüle">Resimler</a>
+
+  <br /><br />
+  <!-- 
+  * "SAYFA İÇİ LİNK VERMEK" özellikle çok uzun yazılarda önem arzeder.
+  * Bunun için "#" elemanı kullanılır.
+  * "#" elemanı sayfa içerisinde herhangi bir etikette "id" elemanı aynı isimli bölüme gider.
+  * Örnek olarak aşağıda "h2" etiketi içerisine id="bolum1" eklendiği ve "a" etiketi içerisinde "#bolum1" dendiği için sayfa içerisinde çıkan Bölüm 1'e tıklandığında direk Bölüm 1 başlığına gidilir.
+  -->
+  <a href="#bolum1">Bölüm 1</a>
+  <a href="#bolum2">Bölüm 2</a>
+
+  <h2 id="bolum1">Bölüm 1</h2>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
+    assumenda quam tempora mollitia, amet nostrum consequatur accusamus
+    distinctio suscipit dicta expedita, aliquid unde recusandae dolores iure
+    molestiae dignissimos voluptatum quos.
+  </p>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <h2 id="bolum2">Bölüm 2</h2>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
+    assumenda quam tempora mollitia, amet nostrum consequatur accusamus
+    distinctio suscipit dicta expedita, aliquid unde recusandae dolores iure
+    molestiae dignissimos voluptatum quos.
+  </p>
+</body>
+
+</html>

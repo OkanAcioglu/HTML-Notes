@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>İmages</title>
+  </head>
+  <body>
+    <!-- 
+  * "img" tagi içerisinde bir açılış etiketi var fakat bir kapanış etiketi yok.
+  * "img" altında 2 adet attribute var birinci "src" ikincisi ise "alt"
+  * "src" açılımı source olup resim kaynağını, "alt" ise resmi açıklayıcı kelimeler içeren isimdir.
+  * "alt" attribute ayrıca eğer "src" attribute içerisine yazılan resim bulunamaz veya gösterilen kaynakta böyle bir resim yoksa resim gösterilmez onun yerine "alt" içerisinde yazılan açıklama ekrana gelir.
+  * "alt" etiketi ayrıca ekran okuyan programlar için önemli olmakla birlikte "SEO" açısından da önemlidir.
+  -->
+    <img src="images/city.jpg" alt="De Bruyne" />
+    <!--
+  * "img" içerisine "width" ve "height" attributeleri de yazılabilir. Tek başına "width" veya tek başına "height" attributeleri kullanıldığında kullanılmayan attribute orijinal boyutlara göre oranlanarak kullanılır fakat "width" ve "height" aynı anda kullanıldığında resmin orijinalliği bozulabilir. Bu yüzde ikisini aynı anda kullanmak tavsiye edilmez.
+  -->
+    <img
+      src="https://img-s2.onedio.com/id-556d67b1b3eebe8d7cf49204/rev-0/w-635/f-jpg/s-339f3b29e1e8cb0e4c855fac2f7181a02919590d.jpg"
+      alt="sokak resmi"
+      width="600"
+    />
+    <!-- 
+  * Ayrıca sayfada bir resim gösterildiğinde veya bir video eklendiğinde bunların hepsi için servera bir talep gönderilir. Bunlar da zaman açısından bir külfet olacağından resim veya video boyutlarının çok büyük olmaması tavsiye edilir. Resimlerin optimize edilmesi gerekli. Örnek olarak "png" uzantılı bir resmin "jpg" yapılması tavsiye edilir.
+  -->
+    <!-- 
+  * "../" kullanılarak bir üst dizine çıkılabilir.
+  * "../../" kullanılarak iki üst dizine çıkılabilir.
+   -->
+  </body>
+</html>

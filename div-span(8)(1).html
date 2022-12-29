@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Div and Span</title>
+  </head>
+  <body>
+    <!-- 
+  * Aşağıda "h1" ve "p" etiketleri içerisine yazılan textler satırı olduğu gibi kaplar. Örneğin "h1" içerisindeki başlık başlığın tamamını kaplayacak boyutta olmasa da diğer texte geçildiğinde bir alt satıra inildi. Bu gibi elemanlara "Blok Elemanlar" denir. "h1" , "p" gibi elemanlar display:block olarak tanımlanır.
+  * Aşağıda örneği Blog 1 içerisinde bulunan "h2" ve "p" elemanını gruplayarak grup altında bulunan elemanlara komple bir CSS özelliği verilebilir. Veya sayfa içerisinde bölümlemeler yapılması için bir "div" kullanmamız gerekir.
+  * "div" division kelimesinin kısaltmasıdır. Mantıksal olarak elemanları gruplamak için kullanılır.
+  * "div" de bir blok eleman olduğu için içine alınan alt elemanlar da o blok elemanın kapladığı alan kadar yer kaplar. Sonuçta görüntü açısından bir fark olmayacak.
+  * "div" ile ayırdığımız gruplara isimler verebilir. Bunu "id" etiketi ile yaparız. "id" bir kimlik numarası demektir. Kimliğe de benzersiz bir isim vermemiz gerekir. 
+  -->
+    <div id="header">
+      <h1>Lorem ipsum dolor sit amet.</h1>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In labore odio
+        dolore blanditiis quis qui maiores possimus deserunt perferendis vitae,
+        natus nam numquam dignissimos quasi? Voluptate dolore animi adipisci
+        eveniet!
+      </p>
+    </div>
+    <!-- 
+  * Aşağıdaki gibi tüm blogları bir "div" içerisine alıp, blogları da ayrı ayrı bir "div" içerisine alabilir.
+  -->
+    <div id="blogs">
+      <div id="blog1">
+        <h2>Blog 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas,
+          laudantium odio exercitationem, ipsum molestiae reiciendis dolor
+          incidunt cum adipisci sequi dolorem, voluptatibus veritatis neque
+          inventore error accusantium ullam voluptates tempore?
+        </p>
+      </div>
+      <div id="blog2">
+        <h2>Blog 2</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          ducimus id fugiat harum accusantium, odit eos consequuntur dolorum
+          quam beatae quia sed in sint numquam dignissimos modi impedit
+          voluptatem non?
+        </p>
+      </div>
+      <!--  
+  * "span" etiketi ise örneğin "p" elemanı içerisinde herhangi bir elemana bir özellik kazandırmak istiyoruz. Bu durumda bir "span" etiketi kullanılabilir. "span" etiketi inline bir elemandır. Elemanın inline olması demek sadece içeriği kadar yer kaplıyor demek.   
+  -->
+      <div id="blog3">
+        <h2>Blog 3</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
+          ducimus
+          <span style="background-color: yellow; color: blueviolet"
+            >id fugiat harum accusantium,</span
+          >
+          odit eos consequuntur dolorum quam beatae quia sed in sint numquam
+          dignissimos modi impedit voluptatem non?
+        </p>
+      </div>
+    </div>
+    <div id="menu">menu</div>
+    <div id="footer">footer</div>
+  </body>
+</html>

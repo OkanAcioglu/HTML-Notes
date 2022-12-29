@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tables</title>
+</head>
+
+<body>
+  <!-- 
+  * "table" attribute ile tablo çağrılır.
+  * "caption" attributesi tablonun başlığını oluşturmak için kullanılır. "table" etiketinin ilk child olarak kullanılması zorunludur.
+  ! "caption" attributesini içeren "table" etiketi bir "figure" etiketinin tek child'i ise, "caption" yerine "figcaption" etiketi kullanılmalıdır.
+  ! "table" etiketine eklenen arka plan rengi, "caption" attributesini içermeyecektir. Her ikisinin de arkasında aynı rengin olmasını istiyorsak,"caption" öğesine de bir arka plan rengi eklenmelidir.
+  * "thead" etiketi tablonun sütunlarının başlığı olarak tanımlanır.
+  * "thead" etiketi içerisinde yazılanlar otomatik olarak "font-weight:bold" niteliği ile yazılır.
+  * "thead" içindeki sütun için özel olarak "th" kullanılır.
+  * "tfoot" etiketi tablonun sütunlarını özetleyen bir satır tanımlar.
+  * "td" etiketi veri içeren bir tablo öğesi tanımlar.
+  * "tr" etiketi tablodaki bir hücre satırını tanımlar.Daha sonrasında içerisi "td" ve "th" ile karma şekilde doldurulabilir.
+  * "th" etiketi bir hücreyi, bir grup tablo hücresinin başlığı olarak tanımlar. Tam yapı "scope" ve "headers" attributeleri ile tanımlanır.
+  !  colspan="2" attribute ile satır birleştirme yapılır.
+  ! "2" burada 2 satırın işini yap anlamına gelir.   
+  ! rowspan="2" attribute ile sütunlar birleşir.
+  ! Birleştirilmek istenen sütunun bilgisi altına denk gelen satırdan silinmelidir.
+  !! "colspan" ve "rowspan" attributeleri "td" , "tr" ve "th" için kullanılabilir.
+  * "th" etiketinin "colspan" ve "rowspan" dışında "scope" attributesi de vardır.
+  * "scope" attributesi "row" , "col" , "rowgroup" , "colgroup" değerleri alabilir.
+  
+        
+        -->
+
+  <table>
+    <caption>Alien football stars</caption>
+    <tr>
+      <th scope="col">Player</th>
+      <th scope="col">Gloobles</th>
+      <th scope="col">Za'taak</th>
+    </tr>
+    <tr>
+      <th scope="row">TR-7</th>
+      <td>7</td>
+      <td>4,569</td>
+    </tr>
+    <tr>
+      <th scope="row">Khiresh Odo</th>
+      <td>7</td>
+      <td>7,223</td>
+    </tr>
+    <tr>
+      <th scope="row">Mia Oolong</th>
+      <td>9</td>
+      <td>6,219</td>
+    </tr>
+  </table>
+
+  <table border="1" width="50%">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Ürün İsmi</th>
+        <th>Fiyat</th>
+        <th>Resim</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>İphone 11</td>
+        <td>7000 TL</td>
+        <td>1.jpeg</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Iphone 12</td>
+        <td>8000 TL</td>
+        <td>2.jpeg</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>İphone 13</td>
+        <td>9000 TL</td>
+        <td>3.jpeg</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>İphone 13</td>
+        <td colspan="2">9000 - 3.jpeg</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td rowspan="2">Iphone 12</td>
+        <td>8000 TL</td>
+        <td>2.jpeg</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>9000 TL</td>
+        <td>3.jpeg</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+
+</html>
+<!-- 
+  * "cellpadding" (Hücreleri genişletme), "cellspacing" (Hücreler arası mesafe) gibi attributeler de bulunmaktadır fakat bunların destekleme meselesinden dolayı kullanılması tavsiye edilmiyor.
+  * Tablo süslemeleri ve tüm bu değişiklikler CSS ile yapılabilir.
+-->

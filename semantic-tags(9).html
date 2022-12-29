@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Semantic Tags</title>
+</head>
+<!-- 
+* "div" ve "span" etiketleri non-semantic elements olarak geçerler. Kontent içeriği ile ilgili tarayıcıya bir bilgi vermezler ve SEO açısından mantıksal bir anlam katmazlar.
+! Fakat aşağıda sıralanan etiketler semantic elementler olarak bilinirler ve içeriğe ayrıca tarayıcıya mantıksal anlam katarlar.
+! "form" , "table" , "article" , "aside" , "details" , "figcaption" , "figure" , "footer" , "header" , "main" , "mark" , "nav" , "section" , "summary" , "time"
+* Semantic etiketlerin genel olarak 3 görevi vardır. Bunlar arama motoları semantik etiketleri içeriğin önemli anahtar kelimeleri olarak değerlendirecek sıralamada yukarılara taşıyacaktır. Ekran okuyucular semantik etiketleri bir yön tabelası olarak kullanacaklardır. Son olarak ise sonsuz div etiketleri arasından arama ypmaktansa ilgili semantik arama yapmayı sağlayarak hem yazılan kodun daha düzenli olmasını hem de kodu inceleyen insanlara daha anlaşılır bir ortam hazırlayacaktır.
+! Hangi semantik etiketin nerede kullanılacağı ile ilgili kesin kurallar yoktur. Burada kodu yazan kişi içeriğe en uygun semantik etiketi seçerek onu kullanmalıdır. Örnek olarak sitenin global olarak "header" ve "footer" etiketi dışında site içerisinde kullanılan herhangi bir semantik etiketin de kendine ait "header" ve "footer" etiketi olabilir.
+-->
+
+<body>
+  <!--  
+* En genel anlamda semantik etiketler tanıtılmadan önce yapılan şey (div id="header") kullanmaktı.Semantik etiketler tanıtıldıktan sonra direk "header" semantic etiketi kullanılabilir.
+-->
+  <!-- 
+* "header" tipik olarak giriş veya gezinme yardımcıları grubu olan giriş içeriğini temsil eder. Başlık öğelerini, bir logo , arama formu , bir yazar adı içerebilir.
+* "header" içeriği bölümlendirmez ve sayfaya yeni bir bölüm sunmaz.
+* "header" etiketi "body içerisinde" kullanıldığı zaman bir "banner landmark(defining global site header)" görevi görür. Fakat "article" , "section" , "aside" gibi elemanlar içerisinde bu görevi yapmaz.
+! "nav" etiketi geçerli sayfada yada sayfalar arası linkleri içeren bölümü temsil eder. Bu bölümlerin yaygın örnekleri menüler,içindekiler tablosu ve dizinlerdir.
+-->
+  <header>
+    <img src="#" alt="" />
+    <h1>En Çok Okunanlar</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Anasayfa</a></li>
+        <li><a href="#">Kurslar</a></li>
+        <li><a href="#">Makaleler</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!--
+  * "header" etiketi ayrıca "article" etiketi altında başlık etiketi olarak da kullanılabilir.
+   -->
+  <article>
+    <header>
+      <h2>Planet Earth</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, quas.
+      </p>
+    </header>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, dolore.</p>
+    <div><a href="#">Continue Reading</a></div>
+  </article>
+  <!-- 
+! "article" etiketi sayfada bağımsız olarak ayrılabilen herhangi bir içeriği temsil eder. Örnek olarak bir forum gönderisi , dergi veya gazete makalesi , blog , ürün kartı , herhangi bir bağımsız içerik öğesi... verilebilir.
+! Belirli bir içerikte birden fazla "article" etiketi olabilir. İç içe geçmiş "article" etiketlerinden içte bulunanlar onların kapsayıcı global "article" etiketi ile ilişkili içerik içermelidir.
+! "Article" etiketi içerisinde bir başlık kullanılması uygun olur. Hatta bir zorunluluk da denebilir.
+ -->
+  <article>
+    <h1>Weather forecast for Seattle</h1>
+    <article>
+      <h2>03 March 2018</h2>
+      <p>Rain.</p>
+    </article>
+    <article>
+      <h2>04 March 2018</h2>
+      <p>Periods of rain.</p>
+    </article>
+    <article>
+      <h2>05 March 2018</h2>
+      <p>Heavy rain.</p>
+    </article>
+  </article>
+  <!-- 
+  * <aside> etiketi yalnızca DOLAYLI olarak sayfanın veya yazının ana içeriğiyle ilgili olan bir belgenin bir bölümünü temsil eder.Ayrıca kenar çubukları ve çağrı kutularında da kullanılır.
+  * Parantez içindeki yazılar, yazı akışında bir yere sahip olduğu için bunlar "aside" etiketi içine alınmamalıdır.
+   -->
+  <section id="content">
+    <aside>
+      <h2>Kategoriler</h2>
+      <nav>
+        <h3>Html</h3>
+        <ul>
+          <li>
+            <a href="#">Html Nedir?</a>
+          </li>
+          <li>
+            <a href="#">Html Sayfa Tasarımı</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav>
+        <h3>Css</h3>
+        <ul>
+          <li>
+            <a href="#">Css Nedir?</a>
+          </li>
+          <li>
+            <a href="#">Css Sayfa Tasarımı</a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <article>
+      <p>
+        The Disney movie <cite>The Little Mermaid</cite> was
+        first released to theatres in 1989.
+      </p>
+      <aside>
+        <p>
+          The movie earned $87 million during its initial release.
+        </p>
+      </aside>
+      <p>
+        More info about the movie…
+      </p>
+    </article>
+    <!-- 
+* "section" etiketi neredeyse "div" ile aynıdır. Belli etiketleri gruplamak için kullanılır.
+* "section" etiketi kullanılabilecek daha uygun bir semantic etiket bulunmadığı durumlarda kullanılmalıdır. Örnek olarak navigation menüsü bir "nav" öğesi içine sarılmalıdır fakat arama sonuçları listesi veya harita görüntüsü ve kontrolleri belirli bir etiketi sahip olmadığı için buralar "section" kullanılabilir.
+* Çevrelenen içeriğin çevrelenme amacı sadece stil uygulamak ise "section" etiketi yerine "div" etiketi kullanılması gereklidir.
+* Semantik taglerden biri olan "section" etiketi içerisinde bir başlık kullanılması uygun olur. Hatta bir zorunluluk da denebilir.
+* İkincil bir navigasyon menüsü durumda global navigasyon çubuğu zaten bir "nav" öğesine sarılmışsa, önceki/sonraki navigasyon menüsü bir "section" içine alınabilir.
+* Eğer bir "section" etiketinde başlık görünmesini istemiyorsanız döküman içine yine de başlığı yazıp still olarak "hidden" ile başlığı göstermemek SEO açısından daha iyi olacaktır.
+-->
+
+    <section>
+      <h2>Heading</h2>
+      <p>Bunch of awesome content</p>
+    </section>
+
+    <section>
+      <h2 class="hidden">Controls</h2>
+      <button class="reply">Reply</button>
+      <button class="reply-all">Reply to all</button>
+      <button class="fwd">Forward</button>
+      <button class="del">Delete</button>
+    </section>
+    <!-- !! .hidden {position: absolute; top: -9999px; left: -9999px;} (Yanda "hidden" için screen-reader friendly bir CSS örneği görünmektedir.) -->
+    <!-- 
+* "main" etiketi "body" içerisinde bulunan en dominant içerik için , sayfanın merkez konusu için kullanılır.
+* Kenar çubukları, sidebarlar, telif hakkı bilgileri, bağlantıları,site logoları ve arama formları gibi bölümünde yinelenen içerik "main" etiketi içerisine alınmamalıdır.
+-->
+    <main>
+      <h1>En Çok Okunanlar</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+        quia veritatis qui. Voluptates sapiente reiciendis itaque aliquam vel,
+        possimus, tenetur distinctio, fuga unde voluptatibus sint error ipsum
+        quas sunt ad?
+      </p>
+      <div id="all-articles">
+        <article>
+          <h2>Html Nedir?</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+            odit molestiae ratione placeat expedita vel dolorem impedit
+            cupiditate dignissimos laborum nobis nostrum ducimus doloremque
+            beatae at facere quisquam, necessitatibus iste.
+          </p>
+          <p>
+            Okan Acıoğlu tarafından
+            <time datetime="2022-06-06 22.52">2022 Haziran</time> ayında
+            yayınlandı
+          </p>
+        </article>
+        <article>
+          <h2>Html Sayfa Tasarımı</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+            odit molestiae ratione placeat expedita vel dolorem impedit
+            cupiditate dignissimos laborum nobis nostrum ducimus doloremque
+            beatae at facere quisquam, necessitatibus iste.
+          </p>
+          <!-- 
+* "footer" en yakın ancestor "sectioning content" elemanına genel olarak yazarla ilgili bilgilerin, telif hakkı verilerinin veya ilgili belgelere linklerin olduğu bir bölüm açar.
+* Yazar hakkında bilgiler içeren "address" etiketi "footer" içerisinde yer alabilir.
+* En yakın ancestor eleman "body" ise "footer" tüm sayfa için geçerlidir.
+* "footer" bir "sectioning content" değildir. İçeriğe yeni bir bölüm açmaz.
+ -->
+          <article>
+            <h1>How to be a wizard</h1>
+            <ol>
+              <li>Grow a long, majestic beard.</li>
+              <li>Wear a tall, pointed hat.</li>
+              <li>Have I mentioned the beard?</li>
+            </ol>
+            <footer>
+              <p>© 2018 Gandalf</p>
+            </footer>
+          </article>
+
+
+          <!-- 
+              * "details" etiketi bilgilerin yanlızca ilgili yere tıklanarak açık duruma getirildiğinde görülebilen bir açıklama penceresi öğesi oluşturur.
+              * "summary" etiketi kullanılarak öğe kapalı haldeyden ekranda görünecek text yazılabilir. Aksi halde ekrana tarayıcıda default olarak atanan öğe kapalı formda görünecektir.
+              * "open" attribute sayesinde "details" etiketinin sayfaya default olarak açık gelmesi sağlanabilir.
+              * "summary" etiketi "details" etiketi için açıklama kutusu, resim yazısı veya açıklama belirtir.
+             -->
+          <details>
+            <summary>Details</summary>
+            Something small enough to escape casual notice.
+          </details>
+
+          <details open>
+            <summary>System Requirements</summary>
+            <p>Requires a computer running an operating system. The computer
+              must have some memory and ideally some kind of long-term storage.
+              An input device as well as some form of output device is
+              recommended.</p>
+          </details>
+
+          <!-- 
+          * "figcaption" etiketi "figure" etiketinin bir child elemanı olarak bir resim yazısı veya açıklamayı temsil eder. "figure" etiketinin ilk veya son child elemanı olmalıdır.
+          * "figure" etiketi "figcaption" etiketi ve içeriği ile birlikte bağımsız bir birim içeriği temsil eder.
+          * "figure" etiketi içeriğin ana akışında başvurulan fakat yeri değiştirildiğinde içeriğin akışını bozmayan veya bir eke taşınabilen bir resim, çizim , diyagram , kod parçağı...belirtir.
+          * 
+           -->
+
+          <figure>
+            <img src="favicon-192x192.png" alt="The beautiful MDN logo.">
+            <figcaption>MDN Logo</figcaption>
+          </figure>
+
+          <figure>
+            <figcaption>Get browser details using <code>navigator</code>.</figcaption>
+            <pre>
+            function NavigatorExample() {
+              var txt;
+              txt = "Browser CodeName: " + navigator.appCodeName + "; ";
+              txt+= "Browser Name: " + navigator.appName + "; ";
+              txt+= "Browser Version: " + navigator.appVersion  + "; ";
+              txt+= "Cookies Enabled: " + navigator.cookieEnabled  + "; ";
+              txt+= "Platform: " + navigator.platform  + "; ";
+              txt+= "User-agent header: " + navigator.userAgent  + "; ";
+              console.log("NavigatorExample", txt);
+            }
+              </pre>
+          </figure>
+
+          <figure>
+            <figcaption><cite>Edsger Dijkstra:</cite></figcaption>
+            <blockquote>If debugging is the process of removing software bugs,
+              then programming must be the process of putting them in.</blockquote>
+          </figure>
+
+          <figure>
+            <p style="white-space:pre">
+              Bid me discourse, I will enchant thine ear,
+              Or like a fairy trip upon the green,
+              Or, like a nymph, with long dishevelled hair,
+              Dance on the sands, and yet no footing seen:
+              Love is a spirit all compact of fire,
+              Not gross to sink, but light, and will aspire.</p>
+            <figcaption><cite>Venus and Adonis</cite>,
+              by William Shakespeare</figcaption>
+          </figure>
+
+        </article>
+      </div>
+  </section>
+  <!-- 
+* "time" etiketi kullanılarak yazılan tarihe arama motorları ve tarayıcı açısından mantıksal bir anlam yüklenebilir."datetime" child etiketi ile de hatırlatıcıların kullanımı ve arama motorlarında daha yüksek sıralarda sıralanma sağlanabilir. "datetime" tarih belirtirken önce yıl sonra ay sonra gün olacak şekilde ve araya "-" belirtilmelidir.
+             -->
+  <p>
+    Okan Acıoğlu tarafından
+    <time datetime="2022-06-06 22.52">2022 Haziran</time> ayında
+    yayınlandı
+  </p>
+
+  </main>
+</body>
+
+</html>
+
+<html>
+
+<body>
+  <!-- 
+* "mark" söz konusu içerikte alaka düzeyi veya önemi bağlamında referans veya gösterim amacıyla kullanılır. 
+* "q" veya "blockquote" içerisinde kullanılan "mark" etiketi kaynak içerikte işaretlenmeyen veya orijinal yazarın işaretlememesine rağmen metnin inceleme gerektirdiğini belirtir. Bu eylem fosforlu kalem kullanmak gibidir.
+* Bunun dışında "mark", içeriğin, kullanıcının mevcut içerikle ilgili olması muhtemel bir bölümünü belirtir. Bu, örneğin bir arama işlemiyle eşleşen sözcükleri belirtmek için kullanılabilir. 
+ -->
+  <blockquote>
+    It is a period of civil war. Rebel spaceships, striking from a
+    hidden base, have won their first victory against the evil
+    Galactic Empire. During the battle, <mark>Rebel spies managed
+      to steal secret plans</mark> to the Empire's ultimate weapon,
+    the DEATH STAR, an armored space station with enough power to
+    destroy an entire planet.
+  </blockquote>
+  <br>
+  <p>It is a dark time for the Rebellion. Although the Death
+    Star has been destroyed, <mark class="match">Imperial</mark>
+    troops have driven the Rebel forces from their hidden base and
+    pursued them across the galaxy.</p>
+
+  <p>Evading the dreaded <mark class="match">Imperial</mark>
+    Starfleet, a group of freedom fighters led by Luke Skywalker
+    has established a new secret base on the remote ice world of
+    Hoth.</p>
+
+  <!-- 
+* "pre" etiketi içerisindeki yazılanları olduğu gibi ekrana yansıtır. içerik içinde White-space olduğu gibi yansıtılır.
+* "pre" etiketi içinde <, >, & ve " gibi ayrılmış karakterler varsa, karakterlerin ilgili varlık kodları kullanılmalıdır. 
+     -->
+  <pre>
+  L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+</pre>
+
+  <pre>
+let i = 5;
+
+if (i &lt; 10 &amp;&amp; i &gt; 0)
+  return &quot;Single Digit Number&quot;
+</pre>
+  <!-- 
+* "cite" etiketi alıntı yapılan bir çalışmaya referans açıklamak için kullanılır. Çalışmanın başlığını içermelidir.
+* "blockquote" ve "q" etiketleri içinde yapılan alıntılarda içeriğin kaynağına referans göstermek için "cite" etiketini attribute olarak kullan.
+ -->
+  <figure>
+    <blockquote>
+      <p>It was a bright cold day in April, and the clocks were striking thirteen.</p>
+    </blockquote>
+    <figcaption>First sentence in <cite><a href="http://www.george-orwell.org/1984/0.html">Nineteen
+          Eighty-Four</a></cite>
+      by George Orwell (Part 1, Chapter 1).</figcaption>
+  </figure>
+
+  <p>More information can be found in <cite>[ISO-0000]</cite>.</p>
+  <!-- 
+  * "q" etiketi içindeki içeriğin satır için alıntı olduğunu belirtir. Çoğu modern tarayıcıda etiket içine alınan içerik tırnak içinde yazdırılır. Bu alıntı paragraf gerektirmeyen kısa alıntılar için kullanılır.
+  * "cite" attributesi ile birlikte alıntı veya referansı açıklayan içerik eklenir.
+   -->
+  <p>According to Mozilla's website,
+    <q cite="https://www.mozilla.org/en-US/about/history/details/">Firefox 1.0
+      was released in 2004 and became a big success.</q>
+  </p>
+
+  <!-- 
+  * "blockquote" etiketi içeriğin genişletilmiş bir alıntı olduğunu belirtir. Genellikle, bu görsel olarak girinti ile oluşturulur. Alıntının kaynağı için bir URL, "cite" attributesi kullanılarak verilebilirken, kaynağın bir metin gösterimi için <cite> etiket olarak kullanılarak verilebilir.
+   -->
+  <figure>
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+      <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.
+      </p>
+    </blockquote>
+    <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
+  </figure>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+<!-- !! abbr etiketi bak -->

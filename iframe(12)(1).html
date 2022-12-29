@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ifame</title>
+  </head>
+  <body>
+    <!-- 
+  * Bir HTML sayfası içerisine başka bir HTML sayfası yerleştirmek istedğimiz zaman bir iframe kullanılır.
+  * "iframe" dediğimiz zaman bize hemen bir "src" yani source bir de "frameboder" yani çerçeveye bir kenarlık vermek istemediğimizde bunu kullanabiliriz.
+  * "iframe.html" ile aynı dizin içerisinde bulunan herhangi bir HTML veya internet üzerinden bir sayfa da kullanılabilir.
+  * "width" ve "height" kullanılarak çerçeve genişliği ve yüksekliği değiştirilebilir.
+  * İçerik ekrana sığmassa scroll bar çıkar.
+  * "title" kullanılarak iframe'e bir başlık atanabilir. Bu özellik ekranda görünmez fakat ekran okuyucular için önemlidir.
+  -->
+
+    <iframe
+      name="myframe"
+      src="forms.html"
+      frameborder="0"
+      width="400"
+      height="400"
+      title="üyelikformu"
+    ></iframe>
+    <!-- 
+    * "iframe" içerisinde tanımlanan "name" ve "p" etiketi içerisinde "a" etiketi içine tanımlanan target sayesinde frame içerisinde tanımlanan bir web sayfasına gidilebilir. 
+    -->
+    <p>
+      <a href="https://www.sadikturan.com" target="myframe">Linke Git</a>
+    </p>
+
+    <!-- 
+    * "iframe" kullanım amaçlarından biri örnek olarak bir Youtube videosuna girdiğimizde sağ altta bulunan "paylaş" seçeneğine tıkladığımızda orada bulunan "yerleştir" butonuna tıkladığımızda orada bize bir frame veriyor.
+    * Her video için bir yerleştir butonu görünmeyebilir. Kullanıcının buna izin veriyor olması gerekir.
+    * Sadece video için değil örneğin bir harita bilgisi de aynı şekilde iframe yardımı ile eklenebilir. 
+    -->
+    <div>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/jex--OwVycc"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </body>
+</html>

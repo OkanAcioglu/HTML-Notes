@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lists</title>
+  </head>
+  <body>
+    <!--  
+  * Listeler "sıralı" ve "sırasız" olarak oluşturulabilir.
+  * "Sırasız" listeler başında örneğin yıldız işareti ile "ul" (unordered list) etiketi ile oluşturulur.
+  * "Sıralı" listeler başında sayı ile "ol" (ordered list) etiketi ile oluşturulur.
+  * Her iki liste tipinde de elemanı temsil etmek için mutlaka bir "li" etiketi kullanmamız lazım.
+  -->
+    <ul>
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>item4</li>
+    </ul>
+    <ol>
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>item4</li>
+    </ol>
+    <!--  
+  * Liste elemanlarının başındaki elemanlar "style" etiketi ile değiştirilebilir. 
+  -->
+    <ul style="list-style-type: circle">
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>item4</li>
+    </ul>
+    <ol type="a">
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>item4</li>
+    </ol>
+    <!--  
+  * Liste elemanının kaçtan başlayacağı "start" etiketi ile belirlenebilir. 
+  -->
+    <ol start="15">
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>item4</li>
+    </ol>
+    <!--  
+  * Liste içerisine başka bir liste tanımlanabilir.      
+  -->
+    <ul>
+      <li>item1</li>
+      <li>item2</li>
+      <li>item3</li>
+      <li>
+        item4
+        <ul>
+          <li>4.1</li>
+          <li>4.2</li>
+          <li>4.3</li>
+        </ul>
+      </li>
+    </ul>
+    <!--  
+  * Ayrıca "dl" etiketi ile oluşturulabilecek "description list" adında ayrı bir liste tipi var. 
+  * "dl" alt elemanlarını "dt" (description term) ile gösterilir. Bu etiket verinin tipinin ne olduğunu bize söyler.
+  * "dd" etiketi içerisine de "dt" etiketi içerisine yazılan tipe ait olan açıklama girilir. 
+  -->
+    <dl>
+      <dt>HTML</dt>
+      <dd>5 Saat</dd>
+      <dt>CSS</dt>
+      <dd>15 Saat</dd>
+    </dl>
+    <br /><br />
+    <dl>
+      <dt>HTML</dt>
+      <dd>HTML nedir?</dd>
+      <dd>HTML nasıl kullanılır?</dd>
+      <dt>CSS</dt>
+      <dd>CSS Nedir?</dd>
+      <dd>CSS Nasıl kullanılır?</dd>
+      <dd>CSS etiket tipleri</dd>
+    </dl>
+  </body>
+</html>

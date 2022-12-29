@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sorular</title>
+</head>
+
+<body>
+  <!-- 
+ * meta tag nedir ve kullanım amaçları nelerdir??
+  ! bilgi akışı sağlama, köprü görevi görme, oluşturulan HTML dosyasına bilgi akışı sağlama , isim değer çifti ile eşlestirilir, Tarayıcıya yönelik bilgilerdir, Karakter kodlaması yapar.
+ * 1-<DOCTYPE html> ne işe yarar?
+ * 3-Semantik etiketi neden kullanmak istiyorsunuz?
+ * 5-Kendi kendine kapanan(self-closing)etiket nedir?
+ * 6-Blok öğeler ve inline öğeler arasındaki farkı açıklayın?
+ * 7-Main elementinin amacı nedir?
+ * 8-Bir web sayfası birden çok <header> içerebilir mi? Peki ya <footer>?
+ * 10-Image tag deki alt niteliğinin görevi nedir?
+ * 11-Arama motorları tarafından nasıl daha yükseklerde sıralanırım?
+ * 12- SEO için meta etiketleri?
+ * 13-Doctype verilmediğinde ne olur?
+  ! Quicks (tuhaflık modu) css class id geldiğimizde küçük büyük harflere karşı duyarlılık başlıyor.
+  * 14-http isteklerini araştır.
+  * 15- input submit ile button submit arasındaki fark.
+  * 16- Formlarda select , option , datalist , input , optgroup , progress , meter , button detaylı tekrar çalış
+  * 17- Description list çalış
+  * 18- Biçimlendirme etiketleri , HTML content categories mdn'den çalış
+  * 19- Emmet kısaltmaları çalışş
+  * 20- medium.com araştır üyelik aç.
+  * renk çarkını araştır.
+  * system fonts "-a" araştır ve text-deco sayfasına işle
+  *HTML4 ile HTML5 farkı (kaldırılan yeni gelen etiketler) çalış
+  *mastering marging collapse çalış.
+  *position:sticky çalışş.
+  * float inline-start , inline-end
+  * https://css-diner.netlify.app/ yapppp
+  * js object oriented ne demek?
+  * js multi-paradigm ne demek??
+  * imperative ve deglaretive kodlama??
+  *js defer etmek sayfa çözümlenmesini tamamlandıktan sonra script dosyasına bak. (head kısmı için eklenen js için)
+
+-->
+</body>
+
+<body>
+  <!-- 
+! syntax dilgibisi demek 
+*responsive web design otomatik olarak yeniden boyutlandırma
+! formlarda tüm öğeler name özniteliği kullanılarak gönderilir.
+* debugging chrome üzerinde inspect içerisinde bulunan console kısmında görülür veya inspect içerisinde detaylı arama yaparak üstü çizilen yerleri inceleyecek bulunabilir.
+! 800-1200 çözünülük ->>> 1vh = 12px , 1vw = 8px
+   -->
+
+  <!-- 
+! Metne kalın still uygulamanın en iyi yolu nedir?
+? a)strong
+? b)CSS kullan
+? c)bold
+? d)b
+* "b" ve "i" etiketi sırasıyla kalın ve italik belirtir. "strong" ve "em" ise anlamsaldır. Metnin bir şekilde "güçlü" ve "vurgulanmış" olması gerektiğini, genellikle koyu ve italik olduğunu, ancak gerçek stilin CSS aracılığı ile kontrol edilmesini sağladığını belirtir. Bu nedenle modern web sayfalarında tercih edilir. Cevap "C"
+ -->
+  <!-- 
+! "ol" ve "ul" elementlerini ne zaman kullanmalısınız?
+? a)Madde işaretli bir liste istediğinizde <ul> ve numaralı bir liste istediğinizde <ol> kullanın.
+? b)Öğelerin sırasının önemli olduğu bir öğe listeniz olduğunda <ul> kullanın. Herhangi bir sırayla gidebilecek bir öğe listeniz olduğunda <ol> kullanın.
+? c)Madde işaretli bir liste istediğinizde <ol> ve numaralı bir liste istediğinizde <ul> kullanın.
+? d)Öğelerin sırasının önemli olduğu bir öğe listeniz olduğunda <ol> kullanın. Herhangi bir sırayla gidebilecek bir öğe listeniz olduğunda <ul> kullanın.
+* Cevap "A"
+  -->
+  <!-- 
+! "hr" etiketi yaygın olarak ne için kullanılır?
+? a)Bu etiketin modası geçmiştir ve kullanılmamalıdır.
+? b)Bölüm içindeki paragraf düzeyinde konu değişikliği yapar.
+? c)Yatay bir çizgi çizer.
+? d)Bölüm düzeyinde bir konu değişikliği yapar.
+* "hr": Thematic Break (Horizontal Rule) elementi paragraf düzeyinde konu değişikliğinde kullanılır. Örnek olarak bir hikaye içinde sahne değişikliği veya section içinde konu değişikliği gibi durumlarda kullanılır. 
+   -->
+  <!-- 
+! Soru "header" ve "footer" etiketleri genellikle nerede kullanılır?
+? a)  "body", "article", "aside" ve "section" etiketlerinin çocukları olarak
+? b) "body", "article" ve "section" etiketlerinin çocukları olarak
+? c) "body", "article", "aside", "nav" ve "section" etiketlerinin çocukları olarak
+? d) "body", "article", "table" ve "section" etiketlerinin çocukları olarak
+* Cevap "B"
+ -->
+  <!-- 
+! Bir dökümanın HTML5 ile yazıldığını nasıl anlarsınız?
+? a) Sunucu, web sayfasını bir HTML5 ile sarar.
+? b) Dökümanı başlatırken "!DOCTYPE html" bildirimini kullanarak 
+? c)Tarayıcı, belgeyi HTML5 ile görüntülemek için sunucudan ilgili kodları alır.
+? d)Bir "html" etiketi içine alınır.
+*Cevap "B"
+  -->
+  <!-- 
+!HTML dökümanının root elementi hangi etikettir?
+? a)"DOCTYPE html"
+? b)"html"
+? c)"body"
+? d)"root"
+* "html" öğesi, bir HTML belgesinin kökünü (üst düzey öğe) temsil eder, dolayısıyla kök öğe olarak da adlandırılır. Diğer tüm öğeler bu öğenin torunlarıdır. Cevap "B"
+ -->
+  <!-- 
+! Hangi HTML kod parçacığı bir web sayfasının en üstüne döndürür
+ -->
+  <a id="top">Anasayfa</a>
+  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <a href="#top">Back To The Top</a>
+  <!-- 
+! Sayfa içi link nasıl verilir?
+ -->
+  <a href="#bolum1">Bölüm 1</a>
+  <a href="#bolum2">Bölüm 2</a>
+
+  <h2 id="bolum1">Bölüm 1</h2>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
+    assumenda quam tempora mollitia, amet nostrum consequatur accusamus
+    distinctio suscipit dicta expedita, aliquid unde recusandae dolores iure
+    molestiae dignissimos voluptatum quos.
+  </p>
+  <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  <h2 id="bolum2">Bölüm 2</h2>
+  <p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam
+    assumenda quam tempora mollitia, amet nostrum consequatur accusamus
+    distinctio suscipit dicta expedita, aliquid unde recusandae dolores iure
+    molestiae dignissimos voluptatum quos.
+  </p>
+
+
+  <!-- 
+! HTML4'te kullanımdan kaldırılan ancak HTML5'e geri getirilen üç etiket hangileridir?
+? a)	<rb> <rp> <rt>
+? b)	<acronym> <code> <wbr>
+? c)	<hgroup> <q> <wbr>
+? d)	<b> <i> <u>
+* Cevap "A"
+   -->
+  <!-- 
+! "link" etiketi ne zaman kullanılır?
+? a) mobil uygulamalar için stil sayfalarını, JavaScript'i ve simgeleri bağlarken
+? b) stil sayfalarını, favicon simgelerini ve varlıkları önceden yüklerken
+? c) stil sayfalarını ve favicon simgelerini bağlarken
+? d) stil sayfalarını, harici URL'leri ve favicon simgelerini bağlarken
+* Cevap "C" 
+-->
+  <!-- 
+    !<section>
+    !<p>Paragraph One</p>
+    !</section>
+    !<p>Paragraph Two</p>
+
+  ? section p { 
+  ?  color:red
+  ?  }
+  ?  section + p {
+  ?  color:blue
+  ?   }
+
+  * Yukarıda verilen HTML ve CSS kodları göz önüne alındığında 1. ve 2. paragraflar ne renk olur?
+  * Cevap:"1. Paragraf kırmızı 2. Paragraf mavi."
+  -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forms</title>
+</head>
+<!-- 
+* Form aracılığı ile bir bilgiyi action attribute içerisine tanımlanan bir adrese gönderiyoruz.Bu adres bir dosyaya karşılık geliyor.Dosya içerisinde bir server kodu oluşturuluyor.
+* Aşağıda register.php backend tarafı ile ilgili olmakla birlikte frontend tarafında bize düşen verileri taşıyacak formların tasarımından sorumlu olmak.
+* "form" etiketi ile bilgi göndermek için etkileşimli kontroller içeren bir içerik bölümü açılır.
+*  "form" etiketinin submission sırasında davranışı kontrol eden 5 adet attributesi vardır. Bunlar:
+! "action" etiketi verilerin nereye göndereleciğini belirtir. action="url"
+! "method" etiketi form göndermek için yöntemi seçer. "post" , "get" , "dialog"
+? "get" versus "post" : 
+? "get" metodu kullanıldığında istekler URL kısmında gönderilir. Gönderilen bilgiler URL kısmında görüleceği için güvenlik riski yüksektir ancak "post" yöntemine göre daha hızlıdır."post" metodunda form alanları HTTP REQUEST HEADER içinde kodlanmış olarak gider, URL’de gözükmez ayrıca her türlü dosya gönderilebilir.: XML,Image, File post edebiliriz.
+? "get" ile veri gönderiminde belli bir sınırlama varken (2048 karakter) "post" yönteminde böyle bir kısıtlama yoktur.
+? "get" yönteminde değişkenler URL’de yer aldığı için sayfayı değişken değerleri kaybolmadan yer imlerine atmak mümkündür. Yani "get" ile bir sayfa içeriğini sunucudan almak için tekrar tekrar forma veri girmeye ya da sayfa içi tıklamalar yapılmasına gerek yoktur. Dolayısıyla hazır URL’yi yer imlerine atarak kullanıcı zahmetten kurtarılmış olur. "post" yönteminde ise kullanıcı daha önce geldiği aşamaya(sayfa içeriğine) tekrar varabilmek için forma veri girme ya da tıklama zahmetlerine katlanmak zorundadır.
+* "fieldset" etiketi grup içindeki form elementlerini gruplamak için kullanılır.
+* "legend" etiketi parent elemanı olan "fieldset" içeriği için başlık oluşturur.
+! "required" attributesi eklenen "input" datasının girilmesi zorunlu olduğunu belirtir. Eğer boş bırakılırsa uyarı verir.
+! "minlenght" and "maxlenght" girilmesi gereken minimum ve maksimum sayıda karakteri belli eder.
+! "placeholder" attributesi değer girecek kutucuğun değer girilmeden önce soluk şekilde ne yazacağını belli eder.
+-->
+
+<body>
+  <form action="" method="get">
+    <div>
+      <label for="name">Enter your name: </label>
+      <input type="text" name="name" id="name" required placeholder="Name">
+    </div>
+    <div>
+      <label for="email">Enter your email: </label>
+      <input type="email" name="email" id="email" required placeholder="E-mail">
+    </div>
+    <div>
+      <input type="submit" value="Subscribe!">
+    </div>
+  </form>
+  <br>
+  <hr><br>
+  <form>
+    <fieldset>
+      <legend>Choose your favorite monster</legend>
+
+      <input type="radio" id="kraken" name="monster">
+      <label for="kraken">Kraken</label><br />
+
+      <input type="radio" id="sasquatch" name="monster">
+      <label for="sasquatch">Sasquatch</label><br />
+
+      <input type="radio" id="mothman" name="monster">
+      <label for="mothman">Mothman</label>
+    </fieldset>
+  </form>
+  <br>
+  <hr><br>
+
+  <!-- 
+* "label" etiketi kullanıcı arabirimindeki bir öğenin başlığını temsil eder.
+* "input" etiketinin "label" ile ilişkilendirilmesinin birçok avantajı vardır. Bunlar:
+! 2 etiket sadece görsel olarak değil programsal olarak da birbirine bağlanmış olur. Bu durum ekran okuyucular için kolaylık sağlar. Ayrıca bu ilişkilendirme yapıldığında "input" öğesine verilen isime tıklandığında girdi alanına ulaşılır.
+* "input" ve "label" öğelerini ilişkilendirmek için "input" etiketinin "id" attributesi ile "label" etiketinin "for" attributesi aynı isim veya değeri almalıdır.
+! Alternatif olarak ise "input" öğesi direkt olarak "label" öğesinin child elemanı olarak girilebilir.
+* Belirli bir "input" öğesi birden fazla "label" ile ilişkilendirilebilir.
+  -->
+  <!--
+* "input:" yaptığımızda karşımıza değişik seçenekler gelir. 
+* Normalde id yanına name isminde bir attribute de gelir fakat şu an bunla işimiz yok. 
+* Aşağıda örnekte tek bir seçenek seçilebilir durumda.
+* Bunun sağlayan şey "name" özelliği vererek aynı grup elemanlarını belirtmektir.
+* Label içindeki for ile id kısmı eşitlendiği için sayfada yazan seçeneğin üstüne tıkladığı zaman da kutucuğu seçmiş oluruz. 
+-->
+  <!-- 
+* "button" etiketi etkileşimli bir öğe olup etkinleştirildiğinde, form gönderme veya iletişim kutusu açma gibi programlanabilir bir eylem gerçekleştirir. 
+* "button" etiketi "type" attributesinin 3 tipi vardır. Bunlar:
+! submit: formu submit etmeye yarar. Type belirtilmesse default olarak bu gelir.
+! reset: tüm değerleri resetler
+! button: default olarak hiçbişey yapmaz. istemci tarafı komut dosyalarının, olaylar gerçekleştiğinde tetiklenen öğe olaylarını dinlemesini sağlayabilir.
+? "button" etiketinin aktif olması yani "submit" yapması için muhakkak "form" içinde tanımlanması gerekmektedir.
+* Aşağıda iki kod parçağı da "submit" görevi görür.
+* "input" içerisindeki "value" attributesi ekranda gösterilecek değeri belli eder.
+-->
+  <button>Submit!!</button>
+  <input type="submit" value="Tıklayın">
+  <!-- 
+* Aşağıda "action" attributesi kısmına Google Search ekledik. Google default olarak "name=q" olarak arama yapıyor. biz de input name kısmına "q" yazarsak formumuzda googleda arama yapılabilir. 
+* Farklı sitelerin arama sırasında  arka planda ne gibi bir karakter kullandıkları basit bir şekilde o sitede bir arama yapılarak "URL" içinde bulunabilir.Bu değer örneğin google ve reddit için "q" , youtube için ise "search_query" değeri alıyor.
+* Ayrıca aşağıdaki örneklerde "button" koymasak bile arama kısmına istediğimiz şeyi yazıp entere bastığımızda gene de arama yapar.
+-->
+  <form action="https://www.reddit.com/search/">
+    <input type="text" name="q">
+    <button>Redditte Ara</button>
+  </form>
+  <hr>
+  <form action="https://www.google.com/search">
+    <input type="text" name="q">
+    <button>Google'da Ara</button>
+  </form>
+  <hr>
+  <form action="https://www.youtube.com/results">
+    <input type="text" name="search_query">
+    <button>Youtube'da Ara</button>
+  </form>
+  <!-- 
+* "input" tiplerinden olan "radio" birden fazla seçenek içerisinden sadece biri seçilmek istendiği zaman kullanılır.
+* Seçeneklerden sadece birinin seçilmesini sağlamak için "name" attributesi kullanılır. "name" tüm seçenekler için aynı olmalıdır.
+ -->
+  <div>
+    <p>En sevdiğiniz programlama dili nedir?</p>
+    <input type="radio" id="html" name="programlama" value="HTML" checked />
+    <label for="html">HTML</label>
+    <input type="radio" id="CSS" name="programlama" value="CSS" />
+    <label for="CSS">CSS</label>
+    <input type="radio" id="javascript" name="programlama" value="JS" />
+    <label for="javascript">Javascript</label>
+  </div>
+  <!-- 
+  * "input" tiplerinden biri olan "checkbox" birden fazla seçim yapılması istenen durumlarda kullanılabilir.
+   -->
+  <div>
+    <p>En sevdiğiniz programlama dili nedir?</p>
+    <input type="checkbox" id="html2" checked value="HTML" />
+    <label for="html2">HTML</label>
+    <input type="checkbox" id="CSS2" value="CSS" />
+    <label for="CSS2">CSS</label>
+    <input type="checkbox" id="javascript2" value="JS" />
+    <label for="javascript2">Javascript</label>
+  </div>
+
+  <!-- 
+  * "select" etiketi ile kullanıcının çıkan seçenekler arasından birini seçtiği bir menü açar.
+  * "option" öğesi "select" "optgroup" "datalist" etiketleri içine seçilecek öğelerden her birini tanımlamaya yarar. Genel olarak "option" açılır pencelerdeki menü öğelerini ve diğer liste öğelerini temsil eder. 
+  * Seçim menüsünde karşımıza gelen ilk yazıyı değiştirmek için ilk "option" seçeneğine boş bir "value" değeri atılıp isim yazılabilir.
+  * Yazdırılan sayfada menü içindeki herhangi bir seçeneğin otomatik olarak seçili bir şekilde gelmesi isteniyorsa "selected" attributesi kullanılabilir.
+   -->
+  <p>
+    <label for="hayvan">Favori Hayvanınızı Seçiniz</label>
+    <select name="hayvan" id="hayvan">
+      <option value="">Lütfen Seçiminizi Yapınız</option>
+      <option value="balık" selected>Balık</option>
+      <option value="kedi">Kedi</option>
+      <option value="köpek">Köpek</option>
+    </select>
+  </p>
+  <!-- 
+  * "input" text içine 1 satır yazı yazılabilir. Ancak "textarea" etiketi ile bir yazı kutuğu çağırılmış olur.
+  * Rows ve cols kutucuğun boyutunu etkiler.(Satır ve sütun ekler gibi düşün) 
+-->
+  <div>
+    <label for="intro">Kendini Anlat</label>
+    <textarea id="intro" cols="30" rows="10" placeholder="Yaz Bişey!"></textarea>
+  </div>
+  <!-- 
+  * Email adresini almak için kullanılabilecek input type aşağıdadır.
+  * Burada kullanıcı email adresi formatına uymayan bişey girmek istediğinde uyarı alacaktır. 
+-->
+  <div>
+    <label for="eposta">Email</label>
+    <input type="email" id="eposta" />
+  </div>
+  <!-- 
+  * "input type="password" kullanıldığında kullanıcı tarafından yazılan şifre ekranda görünmeyecektir.
+-->
+  <div>
+    <label for="şifre">Parola</label>
+    <input type="password" id="şifre" />
+  </div>
+  <!-- 
+  * "input type="date" kullanıldığında kullanıcı tarafından tarih istenir.
+-->
+  <div>
+    <label for="tarih">Doğum Tarihi</label>
+    <input type="date" id="tarih" />
+  </div>
+
+  <!-- 
+  * "input" tiplerinden "range" attributeleri olan "min" ve "max" değerleri ile aralığı belirtilebilir. Ayrıca "step" attributesi ile aralıkların ne kadar boyutta değişebileceği ayarlanabilir. "value" attributesi sayesinde ekrana gelen barın hangi seviyeden başlanacağını gösterir.
+   -->
+
+
+
+
+
+
+
+  <!-- 
+  * "datalist" etiketi diğer kontroller arasından seçilebilecek izin verilen veya önerilen seçenekleri temsil eden bir dizi "option" öğesi içerir.
+  * "datalist" öğesi altında bulunan "id" öğesine verilen isim ile "input" içerisinde bulunan "list" öğesine verilen ismin uyuşması gerekir. Bu sayede 2 öğe birbirine bağlanmış olur.
+    -->
+  <label for="myBrowser">Choose a browser from this list:</label>
+  <input list="browsers" id="myBrowser" name="myBrowser" />
+  <datalist id="browsers">
+    <option value="Chrome">
+    <option value="Firefox">
+    <option value="Internet Explorer">
+    <option value="Opera">
+    <option value="Safari">
+    <option value="Microsoft Edge">
+  </datalist>
+
+
+  <div>
+    <button type="submit">Kaydet</button>
+    <button type="reset">Temizle</button>
+  </div>
+  </form>
+</body>
+
+</html>
